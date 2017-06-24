@@ -43,7 +43,7 @@ public class MediaRecorderEngine extends RecorderEngineBase {
     };
 
     public MediaRecorderEngine(Context context) {
-        this(context, OutputFormat.RAW_AMR);
+        this(context, OutputFormat.AMR_NB);
 
     }
 
