@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    tools:context="com.flqy.audiospectrum.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.flqy.library.widget.SpectrumView
+            android:id="@+id/spectrumViewLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:itemColor="#F13D3A"/>
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:textColor="#8E8E8E"
+            android:textSize="16sp"
+            android:text="00:00" />
+
+        <com.flqy.library.widget.SpectrumView
+            android:id="@+id/spectrumViewRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:itemColor="#F13D3A"/>
+
+    </LinearLayout>
+    <TextView
+        android:visibility="invisible"
+        android:id="@+id/recordState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:textColor="#8E8E8E"
+        android:textSize="16sp"
+        android:text="正在录音"
+        android:layout_marginTop="100dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <Button
+        android:id="@+id/startRecord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/recording_selector" />
+</LinearLayout>

@@ -1,0 +1,15 @@
+*.iml
+.gradle
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+/library/build/
+/.idea/
+/app/build/
+/app/app.iml
+/library/library.iml
+/AudioSpectrum.iml
