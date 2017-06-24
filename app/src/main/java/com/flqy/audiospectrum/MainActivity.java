@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         vr = (SpectrumView) findViewById(R.id.spectrumViewRight);
         recorderEngine.setSoundAmplitudeListener(new RecorderEngine.SoundAmplitudeListener() {
             @Override
-            public void amplitude(int amplitude, int db, int value) {
+            public void onAmplitude(int amplitude, int db, int value) {
                 vl.updateForward(value);
                 vr.updateBackward(value);
             }

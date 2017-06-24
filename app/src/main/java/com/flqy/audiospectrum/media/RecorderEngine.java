@@ -19,7 +19,7 @@ public interface RecorderEngine {
     public void stop();
 
     /**
-     * 录音最大时常
+     * 录音最大时长
      *
      * @param seconds
      */
@@ -44,7 +44,7 @@ public interface RecorderEngine {
     }
 
     public interface SoundAmplitudeListener {
-        public void amplitude(int ratio, int db, int value);
+        public void onAmplitude(int ratio, int db, int value);
     }
 
 }

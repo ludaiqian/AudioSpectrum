@@ -114,7 +114,7 @@ public class SpectrumView extends View {
         System.arraycopy(mItemLevels, offset, levels, 0, mItemLevels.length - 1);
         levels[mItemCount - 1] = newLevel;
         this.mItemLevels = levels;
-        refreshUI();
+        refresh();
     }
 
     public void updateBackward(int newLevel) {
@@ -124,10 +124,10 @@ public class SpectrumView extends View {
         System.arraycopy(mItemLevels, 0, levels, offset, mItemLevels.length - 1);
         levels[0] = newLevel;
         this.mItemLevels = levels;
-        refreshUI();
+        refresh();
     }
 
-    private void refreshUI() {
+    private void refresh() {
         if (Looper.myLooper() == Looper.getMainLooper()) {
             invalidate();
         } else {
@@ -139,7 +139,7 @@ public class SpectrumView extends View {
         for (int i = 0; i < mItemCount; i++) {
             mItemLevels[i] = mMinLevel;
         }
-        refreshUI();
+        refresh();
     }
 
     public void setSpacing(int spacing) {

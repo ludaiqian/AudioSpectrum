@@ -8,7 +8,8 @@ import android.os.Handler;
 import android.os.Vibrator;
 import android.widget.Toast;
 
-import com.flqy.library.R;
+import com.flqy.audiospectrum.R;
+
 
 public class MediaRecorderEngine extends RecorderEngineBase {
     private MediaRecorder mr;
@@ -35,7 +36,7 @@ public class MediaRecorderEngine extends RecorderEngineBase {
             int value = db / RATIO;
             if (value < 0) value = 0;
             if (soundAmplitudeListener != null) {
-                soundAmplitudeListener.amplitude(ratio, db, value);
+                soundAmplitudeListener.onAmplitude(ratio, db, value);
                 handler.postDelayed(updateMicStatusTask, REFRESH_LIMIT);
             }
         }
