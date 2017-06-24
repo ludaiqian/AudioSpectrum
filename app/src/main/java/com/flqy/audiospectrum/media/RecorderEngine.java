@@ -44,7 +44,7 @@ public interface RecorderEngine {
     }
 
     public interface SoundAmplitudeListener {
-        public void amplitude(int amplitude, int db, int value);
+        public void amplitude(int ratio, int db, int value);
     }
 
 }

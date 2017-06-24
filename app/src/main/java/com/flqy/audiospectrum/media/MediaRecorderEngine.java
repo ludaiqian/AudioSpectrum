@@ -1,6 +1,5 @@
 package com.flqy.audiospectrum.media;
 
-import android.annotation.SuppressLint;
 import android.app.Service;
 import android.content.Context;
 import android.media.MediaRecorder;
@@ -100,7 +99,6 @@ public class MediaRecorderEngine extends RecorderEngineBase {
         return filePath;
     }
 
-    @SuppressLint("InlinedApi")
     @Override
     public void startRecord(String path) {
         this.filePath = path;
@@ -129,7 +127,7 @@ public class MediaRecorderEngine extends RecorderEngineBase {
             recordingTracker.onRecorderPrepared();
             // 震动
             Vibrator vibrator = (Vibrator) context.getSystemService(Service.VIBRATOR_SERVICE);
-            vibrator.vibrate(501);
+            vibrator.vibrate(500);
             // 开始录制
             mr.start();
             recordingTracker.onRecorderStart();
